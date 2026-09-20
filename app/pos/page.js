@@ -319,7 +319,6 @@ export default function POSPage() {
                         <div>
                           <span className="text-xs text-slate-400 block text-[10px] leading-none">Price</span>
                           <span className="text-sm font-extrabold text-slate-900">
-                            ${Number(p.sellingPrice || p.price).toFixed(2)}
                             ৳{Number(p.sellingPrice || p.price).toFixed(2)}
                           </span>
                         </div>
@@ -382,7 +381,6 @@ export default function POSPage() {
                       <div className="flex items-center gap-2 text-slate-400 text-[11px]">
                         <span className="font-mono">{item.sku}</span>
                         <span>•</span>
-                        <span>${item.unitPrice.toFixed(2)}</span>
                         <span>৳{item.unitPrice.toFixed(2)}</span>
                       </div>
                     </div>
@@ -410,7 +408,6 @@ export default function POSPage() {
                     </div>
 
                     <div className="w-16 text-right">
-                      <p className="font-bold text-slate-900">${item.total.toFixed(2)}</p>
                       <p className="font-bold text-slate-900">৳{item.total.toFixed(2)}</p>
                     </div>
 
@@ -449,12 +446,10 @@ export default function POSPage() {
             <div className="p-4 border-t border-slate-200 bg-white space-y-2.5">
               <div className="flex justify-between text-xs text-slate-600">
                 <span>Subtotal:</span>
-                <span className="font-semibold text-slate-900">${subTotal.toFixed(2)}</span>
                 <span className="font-semibold text-slate-900">৳{subTotal.toFixed(2)}</span>
               </div>
 
               <div className="flex items-center justify-between text-xs text-slate-600">
-                <span>Discount ($):</span>
                 <span>Discount (৳):</span>
                 <input
                   type="number"
@@ -468,7 +463,6 @@ export default function POSPage() {
               </div>
 
               <div className="flex items-center justify-between text-xs text-slate-600">
-                <span>Due Amount ($):</span>
                 <span>Due Amount (৳):</span>
                 <input
                   type="number"
@@ -483,7 +477,6 @@ export default function POSPage() {
 
               <div className="flex justify-between text-base font-extrabold text-slate-900 pt-2 border-t border-slate-200">
                 <span>Final Total:</span>
-                <span>${finalTotal.toFixed(2)}</span>
                 <span>৳{finalTotal.toFixed(2)}</span>
               </div>
 
@@ -529,7 +522,6 @@ export default function POSPage() {
           </div>
           <div className="flex justify-between text-slate-600 font-bold border-t border-slate-200 pt-2 text-sm text-slate-900">
             <span>Total Paid:</span>
-            <span className="text-emerald-700 font-extrabold">${Number(completedSale?.finalTotal).toFixed(2)}</span>
             <span className="text-emerald-700 font-extrabold">৳{Number(completedSale?.finalTotal).toFixed(2)}</span>
           </div>
         </div>

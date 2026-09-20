@@ -209,11 +209,9 @@ export default function ProductsPage() {
                       </span>
                     </TableCell>
                     <TableCell className="text-right text-xs text-slate-500">
-                      ${Number(prod.buyingPrice || 0).toFixed(2)}
                       ৳{Number(prod.buyingPrice || 0).toFixed(2)}
                     </TableCell>
                     <TableCell className="text-right font-semibold text-slate-900">
-                      ${Number(prod.sellingPrice || prod.price).toFixed(2)}
                       ৳{Number(prod.sellingPrice || prod.price).toFixed(2)}
                     </TableCell>
                     <TableCell className="text-right">
@@ -313,7 +311,6 @@ export default function ProductsPage() {
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-xs font-semibold text-slate-700 mb-1">
-                Buying Price ($) *
                 Buying Price (৳) *
               </label>
               <Input
@@ -328,7 +325,6 @@ export default function ProductsPage() {
             </div>
             <div>
               <label className="block text-xs font-semibold text-slate-700 mb-1">
-                Selling Price ($) *
                 Selling Price (৳) *
               </label>
               <Input

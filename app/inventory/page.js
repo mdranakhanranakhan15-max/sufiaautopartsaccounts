@@ -117,7 +117,6 @@ export default function InventoryPage() {
           </div>
 
           <div>
-            <label className="block text-xs font-medium text-slate-700 mb-1">Price ($)</label>
             <label className="block text-xs font-medium text-slate-700 mb-1">Price (৳)</label>
             <input
               type="number"
@@ -197,7 +196,6 @@ export default function InventoryPage() {
                       </span>
                     </td>
                     <td className="py-3.5 px-6 text-right text-slate-900 font-medium">
-                      ${Number(product.price).toFixed(2)}
                       ৳{Number(product.price).toFixed(2)}
                     </td>
                     <td className="py-3.5 px-6 text-right">

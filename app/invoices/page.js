@@ -162,11 +162,9 @@ export default function InvoicesPage() {
                     {sale.cashier?.name || 'Staff'}
                   </TableCell>
                   <TableCell className="text-right font-extrabold text-slate-900">
-                    ${Number(sale.finalTotal).toFixed(2)}
                     ৳{Number(sale.finalTotal).toFixed(2)}
                   </TableCell>
                   <TableCell className="text-right font-semibold text-xs text-red-600">
-                    {sale.due > 0 ? `$${Number(sale.due).toFixed(2)}` : '$0.00'}
                     {sale.due > 0 ? `৳${Number(sale.due).toFixed(2)}` : '৳0.00'}
                   </TableCell>
                   <TableCell className="text-right text-xs text-slate-500">

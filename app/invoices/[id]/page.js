@@ -188,11 +188,9 @@ export default function InvoicePrintPage() {
                     {item.quantity}
                   </td>
                   <td className="py-2.5 px-3 text-right text-slate-700 border-r border-slate-200">
-                    ${Number(item.unitPrice).toFixed(2)}
                     ৳{Number(item.unitPrice).toFixed(2)}
                   </td>
                   <td className="py-2.5 px-3 text-right font-extrabold text-slate-900">
-                    ${Number(item.total).toFixed(2)}
                     ৳{Number(item.total).toFixed(2)}
                   </td>
                 </tr>
@@ -206,25 +204,21 @@ export default function InvoicePrintPage() {
           <div className="w-72 space-y-1.5 text-xs bg-slate-50 p-4 rounded-xl border border-slate-200">
             <div className="flex justify-between text-slate-600">
               <span>Subtotal:</span>
-              <span className="font-semibold text-slate-900">${Number(sale.subTotal).toFixed(2)}</span>
               <span className="font-semibold text-slate-900">৳{Number(sale.subTotal).toFixed(2)}</span>
             </div>
             <div className="flex justify-between text-slate-600">
               <span>Discount:</span>
               <span className="font-semibold text-slate-900">
-                -${Number(sale.discount || 0).toFixed(2)}
                 -৳{Number(sale.discount || 0).toFixed(2)}
               </span>
             </div>
             <div className="flex justify-between text-sm font-black text-slate-900 border-t border-slate-300 pt-2">
               <span>Final Total:</span>
-              <span className="text-base font-black">${Number(sale.finalTotal).toFixed(2)}</span>
               <span className="text-base font-black">৳{Number(sale.finalTotal).toFixed(2)}</span>
             </div>
             <div className="flex justify-between font-bold text-xs border-t border-slate-200 pt-1.5">
               <span className="text-slate-600">Due Amount:</span>
               <span className={sale.due > 0 ? 'text-red-600 font-black' : 'text-slate-900'}>
-                ${Number(sale.due || 0).toFixed(2)}
                 ৳{Number(sale.due || 0).toFixed(2)}
               </span>
             </div>

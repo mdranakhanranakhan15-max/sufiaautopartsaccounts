@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
-  DollarSign,
+  Banknote,
   ShoppingCart,
   Package,
   AlertTriangle,
@@ -102,12 +102,11 @@ export default function DashboardPage() {
               Total Revenue
             </CardTitle>
             <div className="p-2 rounded-xl bg-emerald-50 text-emerald-600">
-              <DollarSign className="w-5 h-5" />
+              <Banknote className="w-5 h-5" />
             </div>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-black text-slate-900">
-              ${totalRevenue.toFixed(2)}
               ৳{totalRevenue.toFixed(2)}
             </div>
             <p className="text-[11px] text-slate-500 mt-1 flex items-center gap-1 font-medium">
@@ -229,7 +228,6 @@ export default function DashboardPage() {
                       {sale.customerName || 'Walk-in'}
                     </TableCell>
                     <TableCell className="text-right font-extrabold text-xs text-slate-900">
-                      ${Number(sale.finalTotal).toFixed(2)}
                       ৳{Number(sale.finalTotal).toFixed(2)}
                     </TableCell>
                     <TableCell className="text-right text-xs text-slate-500">
