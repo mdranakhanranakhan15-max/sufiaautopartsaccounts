@@ -1,9 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import { Search, Receipt, Printer, Eye, Loader2 } from 'lucide-react';
 import { Search, Receipt, Printer, Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { DateRangePicker } from '@/components/ui/date-range-picker';
@@ -40,14 +38,6 @@ export default function InvoicesPage() {
     fetchSales();
   }, []);
 
-  const filteredSales = sales.filter((s) => {
-    const q = search.toLowerCase().trim();
-    return (
-      s.invoiceNumber?.toLowerCase().includes(q) ||
-      s.customerName?.toLowerCase().includes(q) ||
-      s.customerPhone?.toLowerCase().includes(q)
-    );
-  });
   const filteredSales = useMemo(() => {
     return sales.filter((s) => {
       // 1. Text search filter
@@ -93,16 +83,6 @@ export default function InvoicesPage() {
         </div>
       </div>
 
-      {/* Search Bar */}
-      <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between gap-4">
-        <div className="relative flex-1 max-w-sm">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
-          <Input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search by invoice #, customer name, phone..."
-            className="pl-9"
-          />
       {/* Search Bar & Date Filter */}
       <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 flex-1">
@@ -161,8 +141,9 @@ export default function InvoicesPage() {
               <TableRow>
                 <TableCell colSpan={8} className="h-32 text-center text-slate-500">
                   <Receipt className="w-8 h-8 text-slate-300 mx-auto mb-2" />
-                  No sales invoices recorded yet.
-                  No sales invoices match the selected criteria.
+                  {sales.length === 0
+                    ? 'No sales invoices recorded yet.'
+                    : 'No sales invoices match the selected criteria.'}
                 </TableCell>
               </TableRow>
             ) : (
