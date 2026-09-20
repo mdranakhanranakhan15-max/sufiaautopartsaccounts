@@ -10,12 +10,12 @@
       "page": "/",
       "matchers": [
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\.json))?[\\/#\\?]?$",
-          "originalSource": "/"
-        },
-        {
           "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/dashboard(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(.json)?[\\/#\\?]?$",
           "originalSource": "/dashboard/:path*"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/invoices(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(.json)?[\\/#\\?]?$",
+          "originalSource": "/invoices/:path*"
         },
         {
           "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/pos(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(.json)?[\\/#\\?]?$",
@@ -30,22 +30,18 @@
           "originalSource": "/categories/:path*"
         },
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/users(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(.json)?[\\/#\\?]?$",
-          "originalSource": "/users/:path*"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/invoices(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(.json)?[\\/#\\?]?$",
-          "originalSource": "/invoices/:path*"
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/inventory(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(.json)?[\\/#\\?]?$",
+          "originalSource": "/inventory/:path*"
         }
       ],
       "wasm": [],
       "assets": [],
       "env": {
-        "__NEXT_BUILD_ID": "rVi6piKBGHdH3qIWr5VaU",
-        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "ai6P8BWn1oiCOzbfnT4DpORExERAPvUu+4OkQooZcos=",
-        "__NEXT_PREVIEW_MODE_ID": "ac2c7e2060b243f0074759cc5b10adcf",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "2271d1fc1841a5ae089ff2b715d2d8d67a2529b37d8e59130326476a78dd3f52",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "064359a69479b0f78e00df0616aabeaaf6d018745d40876c231140ca19800240"
+        "__NEXT_BUILD_ID": "TsDmO2t84TlvJmzwelDGn",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "qVpRc4S024b0/CCPtb4nqSUzuAfftjkXNi+9zKHB9dc=",
+        "__NEXT_PREVIEW_MODE_ID": "e5ba6b7b5a42d662da95df1c28c67fc7",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "763c6c8267d47b7a27679be68ddd5cd487a1857188b241c861f13f4038417576",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "8fbe518ebfac01af575d9175a5aed95a6e0e79e078b088de139cf5e201f9dfb6"
       }
     }
   },

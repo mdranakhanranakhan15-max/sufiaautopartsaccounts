@@ -34,13 +34,6 @@
       "static/chunks/648-7ba34b6d5e093064.js",
       "static/chunks/app/dashboard/page-3ded9f63e032a25c.js"
     ],
-    "/inventory/page": [
-      "static/chunks/webpack-c81f7fd28659d64f.js",
-      "static/chunks/fd9d1056-e070525407d48905.js",
-      "static/chunks/117-0a4757f4cffd8b09.js",
-      "static/chunks/main-app-ed6261a533f55071.js",
-      "static/chunks/app/inventory/page-0ac8716094eddd24.js"
-    ],
     "/invoices/[id]/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
       "static/chunks/fd9d1056-e070525407d48905.js",
@@ -68,6 +61,13 @@
       "static/chunks/main-app-ed6261a533f55071.js",
       "static/chunks/605-2d2bb183c1a8e797.js",
       "static/chunks/app/login/page-76a475a06af9a216.js"
+    ],
+    "/inventory/page": [
+      "static/chunks/webpack-c81f7fd28659d64f.js",
+      "static/chunks/fd9d1056-e070525407d48905.js",
+      "static/chunks/117-0a4757f4cffd8b09.js",
+      "static/chunks/main-app-ed6261a533f55071.js",
+      "static/chunks/app/inventory/page-0ac8716094eddd24.js"
     ],
     "/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
